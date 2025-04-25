@@ -1,6 +1,6 @@
-python-telegram-bot==13.15
-matplotlib
-openai
-pandas
-ta
+python-telegram-bot
 requests
+openai
+matplotlib
+ta
+pandas
