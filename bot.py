@@ -3,7 +3,10 @@ import requests
 import os
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Updater, CommandHandler, CallbackContext, MessageHandler, Filters, CallbackQueryHandler
-from config import TELEGRAM_TOKEN, ADMIN_ID, FREE_ANALYSIS_LIMIT, SUPPORT_USERNAME
+TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
+ADMIN_ID = int(os.getenv("ADMIN_ID"))
+FREE_ANALYSIS_LIMIT = int(os.getenv("FREE_ANALYSIS_LIMIT"))
+SUPPORT_USERNAME = os.getenv("SUPPORT_USERNAME")
 from binance_data import get_klines
 from analysis import analyze_symbol, plot_chart, generate_gpt_analysis
 import time
